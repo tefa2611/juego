@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Juego de Memoria</title>
+    <link href="CSS/site.css" rel="stylesheet" />
+    <link href="CSS/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    
+    <div id="bienvenida" class="bienvenida">
+      <h1>¡BIENVENIDO COBYLOVER!</h1>
+      <div class="bienvenida-botones">
+        <a href="segundo.html"><button id="juego-normal">¡Quiero jugar!</button></a>
+        <button id="juego-relax">Modo cuilax</button>
+      </div>
+    </div>
+
+    <header class="cabecera">
+      <h3 class="cabecera-memory">Juego de Memory </h3>
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movimientos</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+        <div id="cronometro" class="contador-item">
+          <h4 class="cabecera-titulo">Tiempo</h4>
+          <div class="cabecera-num">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+          </div>
+        </div>
+        <div class="contador-puntos">
+          <h4 class="cabecera-titulo">Puntos</h4>
+          <div class="cabecera-num">
+            <span id="puntos-total">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="nivel">
+        <h4 class="cabecera-titulo">Nivel</h4>
+        <div class="cabecera-num"><span id="nivel">01</span></div>
+      </div>
+      <button id="control-nivel" class="control-nivel">…</button>
+    </header>
+
+    <script src="JS/acierto-error.js"></script>
+    <script src="JS/baraja-reárte.js"></script>
+    <script src="JS/cambia-nivel.js"></script>
+    <script src="JS/comienza-juego.js"></script>
+    <script src="JS/contador.js"></script>
+    <script src="JS/cronometro.js"></script>
+    <script src="JS/descubrir-comparar.js"></script>
+    <script src="JS/finalizar.js"></script>
+    <script src="JS/game-ovar.js"></script>
+    <script src="JS/menu-niveles.js"></script>
+    <script src="JS/iniciar.js"></script>
+    <script src="JS/varibles-globales.js"></script>
+  </body>
+</html>

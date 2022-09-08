@@ -1,0 +1,18 @@
+:root {
+  --bg: #f7dde1;
+  --font: "Archivo", sans-serif;
+  --font-display: "Permanent Marker", cursive;
+  --hotpink: #008999;
+  --orange: #054c52;
+  --black: #0000;
+  --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  min-height: 100vh;
+  font-family: var(--font);
+}

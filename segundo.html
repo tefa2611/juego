@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <link rel="stylesheet" href="CSS/style2.css">
+    <link rel="stylesheet" href="CSS/site.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <h3 class="cabecera-memory">Juego de Memory </h3>
+        <div class="contadores">
+          <div class="contador-item">
+            <h4 class="cabecera-titulo">Movimientos</h4>
+            <div class="cabecera-num">
+              <span id="mov">00</span>/<span id="mov-total">20</span>
+            </div>
+          </div>
+          <div id="cronometro" class="contador-item">
+            <h4 class="cabecera-titulo">Tiempo</h4>
+            <div class="cabecera-num">
+              <span id="minutos">00</span>:<span id="segundos">00</span>
+            </div>
+          </div>
+          <div class="contador-puntos">
+            <h4 class="cabecera-titulo">Puntos</h4>
+            <div class="cabecera-num">
+              <span id="puntos-total">00</span>
+            </div>
+          </div>
+        </div>
+        <div class="nivel">
+          <h4 class="cabecera-titulo">Nivel</h4>
+          <div class="cabecera-num"><span id="nivel">01</span></div>
+        </div>
+      </header>
+
+    <main>
+        <div id="mesa" class="mesa">
+            <div>
+                <div class="tarjeta" data-valor="🦄">
+                    <div class="tarjeta_contenido">🦄</div>
+                </div>
+            </div>
+            <div>
+                <div class="tarjeta" data-valor="🌈">
+                    <div class="tarjeta_contenido">🌈</div>
+                </div>
+            </div>
+            <div>
+                <div class="tarjeta" data-valor="👽">
+                    <div class="tarjeta_contenido">👽</div>
+                </div>
+            </div>
+            <div>
+                <div class="tarjeta" data-valor="🍦">
+                    <div class="tarjeta_contenido">🍦</div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="subeNivel" class="sube-nivel">
+          <div class="modal">
+            <h2>¡Excelente!</h2>
+            <button id="subir">Siguiente nivel</button>
+            <button class="reiniciar">Reiniciar</button>
+          </div>
+        </div>
+        <div id="gameOver" class="game-over">
+          <div class="modal">
+            <h2>¡Lo siento!</h2>
+            <p>
+              Te has quedado sin movimientos 
+              🐹</p>
+              <button class="reiniciar">Reiniciar</button>
+            </p>
+          </div>
+        </div>
+        <div id="timeOver" class="game-over">
+          <div class="modal">
+            <h2>¡Lo siento!</h2>
+            <p>Te has quedado sin tiempo 
+              🐹</p>
+            <button class="reiniciar">Reiniciar</button>
+          </div>
+        </div>
+        <div id="endGame" class="end-game">
+          <div class="modal">
+            <h2>¡Enhorabuena!</h2>
+            <p>Has superado todos los niveles 🏆</p>
+            <button class="reiniciar">Reiniciar</button>
+          </div>
+        </div>
+      </main>
+  
+      <div class="selecciona-nivel">
+        <button id="cierra-niveles" class="cierra-niveles">&times;</button>
+        <ul>
+            <li>
+                <button class="nivel" data.nivel="0">Nivel 1</button>
+            </li>
+            <li>
+                <button class="nivel" data.nivel="1">Nivel 2</button>
+            </li>
+            <li>
+                <button class="nivel" data.nivel="2">Nivel 3</button>
+            </li>
+            <li>
+                <button class="nivel" data.nivel="3">Nivel 4</button>
+            </li>
+            <li>
+                <button class="nivel" data.nivel="4">Nivel 5</button>
+            </li>
+        </ul>
+      </div>
+  
+      <audio
+        src="Sonidos/correcto.mp3"
+        class="sonido"
+        id="sonido-acierto"
+        preload="auto"
+      ></audio>
+      <audio
+        src="Sonidos/Error.mp3"
+        class="sonido"
+        id="sonido-error"
+        preload="auto"
+      ></audio>
+      <audio
+        src="Sonidos/sonidos_carta.mp3"
+        class="sonido"
+        id="sonido-carta"
+        preload="auto"
+      ></audio>
+  
+      <script src="JS/acierto-error.js"></script>
+      <script src="JS/baraja-reárte.js"></script>
+      <script src="JS/cambia-nivel.js"></script>
+      <script src="JS/comienza-juego.js"></script>
+      <script src="JS/contador.js"></script>
+      <script src="JS/cronometro.js"></script>
+      <script src="JS/descubrir-comparar.js"></script>
+      <script src="JS/finalizar.js"></script>
+      <script src="JS/game-ovar.js"></script>
+      <script src="JS/menu-niveles.js"></script>
+      <script src="JS/iniciar.js"></script>
+      <script src="JS/varibles-globales.js"></script>
+</body>
+</html>
